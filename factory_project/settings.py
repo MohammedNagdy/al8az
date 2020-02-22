@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'taggit', # third party package
-    'hitcount', # measuring number of vies of each post
+    #'hitcount', # measuring number of vies of each post
     'registeration', # our app
 ]
 
