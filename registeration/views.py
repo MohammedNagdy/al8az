@@ -109,7 +109,7 @@ class SearchView(Tagged):
 
 
 # article front page
-class PostsAllTogether(Tagged, HitCountDetailView):
+class PostsAllTogether(Tagged):
     template = 'all-articles.html'
 
     # get the function get from Tagged view class
