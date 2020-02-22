@@ -1,6 +1,6 @@
 from django.db import models
 from taggit.managers import TaggableManager # 3rd party lib for tags
-from hitcount.models import HitCountMixin, HitCount # hitcount seeing how many viewes for each post
+#from hitcount.models import HitCountMixin, HitCount # hitcount seeing how many viewes for each post
 from django.contrib.contenttypes.fields import GenericRelation # assistant class for hitcount
 
 # import all libs needed for image compression
@@ -51,8 +51,8 @@ class Article(models.Model):
     slug = models.SlugField(unique=True, allow_unicode=True , max_length=100) # for urls slug
     categories = models.ForeignKey('Categories', on_delete=models.PROTECT) # categories ForeignKey
     tags = TaggableManager()
-    hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk',
-     related_query_name='hit_count_generic_relation')
+    #hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk',
+    # related_query_name='hit_count_generic_relation')
 
 
 
