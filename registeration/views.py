@@ -6,7 +6,7 @@ from django.core.paginator import Paginator # how many articles/posts to show pe
 #------------------------------------------#
 from taggit.models import Tag # tag in view
 from django.db.models import Q # Q for search queries
-from hitcount.views import HitCountDetailView # hitcount views for the posts
+#from hitcount.views import HitCountDetailView # hitcount views for the posts
 
 
 
@@ -120,10 +120,11 @@ class PostsAllTogether(Tagged, HitCountDetailView):
         print(num_posts)
 
         # show the most viewed posts/articles first
-        popular_posts = Article.objects.order_by('-hit_count_generic__hits')[:num_posts]
+        #popular_posts = Article.objects.order_by('-hit_count_generic__hits')[:num_posts]
+        posts = Article.objects.all()
 
         # paginate the posts
-        page_obj = paginate(request, popular_posts)
+        page_obj = paginate(request, posts)
 
         # html references
         context = {
