@@ -1,7 +1,7 @@
 from django.db import models
 from taggit.managers import TaggableManager # 3rd party lib for tags
 #from hitcount.models import HitCountMixin, HitCount # hitcount seeing how many viewes for each post
-from django.contrib.contenttypes.fields import GenericRelation # assistant class for hitcount
+#from django.contrib.contenttypes.fields import GenericRelation # assistant class for hitcount
 
 # import all libs needed for image compression
 # import PIL
