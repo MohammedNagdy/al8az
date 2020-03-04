@@ -129,7 +129,7 @@ class PostsAllTogether(Tagged):
         # html references
         context = {
             'common_tags': common_tags,
-            "posts":popular_posts,
+            #"posts":popular_posts,
             'page_obj' : page_obj,
         }
 
