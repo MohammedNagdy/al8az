@@ -22,10 +22,10 @@ from registeration import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Posts.as_view(), name="home"),
-    path('detail/<slug:slug>', views.PostDetail.as_view(), name="post-detail"),
-    path('tagged/<slug:slug>',views.Tagged.as_view(), name='tagged'),
+    path('detail/<str:slug>', views.PostDetail.as_view(), name="post-detail"),
+    path('tagged/<str:slug>',views.Tagged.as_view(), name='tagged'),
     path('search/', views.SearchView.as_view(), name="search"),
-    path('category/<slug:slug>', views.CategoriesView.as_view(), name='category'),
+    path('category/<str:slug>', views.CategoriesView.as_view(), name='category'),
     path('articles/', views.PostsAllTogether.as_view(), name='all-articles')
 ]
 
